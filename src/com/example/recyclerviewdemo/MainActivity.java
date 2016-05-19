@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
 					ViewHolder target) {
 				int fromPosition = viewHolder.getAdapterPosition();
 				int toPosition = target.getAdapterPosition();
-				mDatas.add(fromPosition, mDatas.remove(toPosition));
+				mDatas.add(toPosition, mDatas.remove(fromPosition));
 				adapter.notifyItemMoved(fromPosition, toPosition);
 				return true;
 			}
